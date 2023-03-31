@@ -12,14 +12,14 @@ for value, key in enumerate(init):
     init_dict[key] = value
 
 
-def transformer(letter :str) -> int:
+def transformer(letter: str) -> int:
     # define function to use for the encoding
     x = init_dict[letter]
-    new_x = ((7 * x) - 5) % len(init)
+    new_x = ((29 * x) - 17) % len(init)
     return new_x
 
 
-def transform(entry :str) -> str:
+def transform(entry: str) -> str:
     password = ""
     for letter in entry:
         password += init[transformer(letter)]
