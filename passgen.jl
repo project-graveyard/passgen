@@ -79,7 +79,7 @@ data = readline()
 
 data_array = Vector{String}(undef, length(data))
 
-for i in 1:length(data)
+for i in eachindex(data)
     data_array[i] = string(data[i])
 end
 
@@ -88,7 +88,7 @@ for x in data_array
     append!(data_num, init[x])
 end
 
-f(x) = (7x - 5) % 73
+f(x) = (29x - 31) % 73
 
 for x = 1:length(data_num)
     data_num[x] = f(data_num[x])
